@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-var _ AccessToken = Client{}
+var _ AccessToken = &Client{}
 
 // Client ...
 type Client struct {
@@ -22,10 +22,10 @@ func NewClient(appId, secret string) *Client {
 	}
 }
 
-func (this *Client) GetToken() string {
+func (c *Client) GetToken(force ...bool) string {
 	return ""
 }
 
-func (this *Client) RefreshIf() bool {
+func (c *Client) RefreshIf(force bool) bool {
 	return false
 }
