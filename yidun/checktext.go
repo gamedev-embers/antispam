@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/gamedev-embers/antispam/yidun/models"
+	"github.com/gamedev-embers/wordfilter/yidun/models"
 	"github.com/google/uuid"
 )
 
