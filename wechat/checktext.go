@@ -35,7 +35,7 @@ type CheckTextResponse struct {
 }
 
 func (res *CheckTextResponse) IsPass() bool {
-	if res.ErrCode != 0 {
+	if res == nil || res.ErrCode != 0 {
 		return false
 	}
 	return res.Result.Suggest == "pass"
